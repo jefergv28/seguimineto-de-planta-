@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GrowLog</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Plan de Nutrición Completo para Cannabis</h1>
+    </header>
+
+    <main>
+      <!-- Sección para agregar plantas -->
+      <section id="agregar-planta">
+        <h2>Agregar Planta</h2>
+        <form id="form-agregar-planta">
+          <label for="nombre-planta">Nombre de la Planta:</label>
+          <input type="text" id="nombre-planta" name="nombre-planta" required>
+
+          <label for="genetica-planta">Genética:</label>
+          <select id="genetica-planta" name="genetica-planta" required>
+            <option value="sativa">Sativa</option>
+            <option value="indica">Indica</option>
+          </select>
+
+          <label for="thc-planta">Nivel de THC:</label>
+          <input type="number" id="thc-planta" name="thc-planta" min="0" max="100" step="0.1" required>
+
+          <button type="submit">Agregar Planta</button>
+        </form>
+      </section>
+
+  
+      <!-- Sección para agregar seguimiento de plantas -->
+      <section id="seguimiento">
+        <h2>Seguir el Crecimiento</h2>
+        <form id="form-seguimiento">
+          <label for="planta-seguimiento">Seleccionar Planta:</label>
+          <select id="planta-seguimiento" name="planta-seguimiento" required>
+            <!-- Opciones de plantas se cargarán aquí -->
+            <!-- <ul id="lista-plantas"></ul> -->
+          </select>
+
+          <button type="button" id="eliminar-planta">Eliminar Planta</button>
+
+          <label for="fecha-seguimiento">Fecha de Aplicación:</label>
+          <input type="date" id="fecha-seguimiento" name="fecha-seguimiento" required>
+
+          <label for="producto-seguimiento">Producto a Aplicar:</label>
+          <select id="producto-seguimiento" name="producto-seguimiento" required>
+            <option value="algafort3">Algafort3</option>
+            <option value="melafort">Melafort</option>
+            <option value="humifort3">HUMIFORT3 SC</option>
+            <option value="sustragrow">Sustragrow</option>
+            <option value="micorrizas">Micorrizas líquidas Sustramed</option>
+            <option value="biologico">COCTEL BIOLÓGICO SUSTRAMED</option>
+            <!-- Añadir más opciones de productos según la guía -->
+          </select>
+
+          <label for="cantidad-seguimiento">Cantidad (ml):</label>
+          <input type="number" id="cantidad-seguimiento" name="cantidad-seguimiento" required>
+
+          <label for="frecuencia-seguimiento">Frecuencia de Aplicación:</label>
+          <input type="text" id="frecuencia-seguimiento" name="frecuencia-seguimiento" required>
+
+          <button type="submit">Registrar Seguimiento</button>
+        </form>
+
+      </section>
+
+    <!-- Tabla para mostrar los seguimientos -->
+<table id="tabla-seguimiento">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Planta</th>
+      <th>Fecha de Aplicación</th>
+      <th>Producto</th>
+      <th>Cantidad</th>
+      <th>Frecuencia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Los datos de seguimiento se mostrarán aquí -->
+  </tbody>
+</table>
+
+    </main>
+
+    <script src="/script.js"></script>
+  </body>
+
+  <footer>
+    <p>&copy; 2024 GrowLog. Todos los derechos reservados.</p>
+  </footer>
+</html>
